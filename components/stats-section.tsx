@@ -1,0 +1,23 @@
+export default function StatsSection() {
+  const stats = [
+    { value: "50K+", label: "Students Prepared" },
+    { value: "120+", label: "Avg Score Increase" },
+    { value: "95%", label: "Success Rate" },
+    { value: "4.9", label: "Student Rating" },
+  ]
+
+  return (
+    <section className="py-12 px-4 sm:px-6 lg:px-8 border-y border-border bg-muted/30">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          {stats.map((stat, index) => (
+            <div key={index} className="text-center">
+              <p className="text-4xl md:text-5xl font-bold gradient-text">{stat.value}</p>
+              <p className="text-sm text-muted-foreground mt-2">{stat.label}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
